@@ -26,7 +26,11 @@ def draw_polygons( points, screen, color ):
                        points[p+2][0], points[p+2][1], color )
             draw_line( screen, points[p+2][0], points[p+2][1],
                        points[p][0], points[p][1], color )
+        scan_conv(points[p][0], points[p][1],points[p+1][0],
+                  points[p+1][1], points[p+2][0], points[p+2][1],
+                  screen, color)
         p+= 3
+        
 
 def scan_conv( x0, y0, x1, y1, x2, y2, screen, color ):
     pList = [ [y0, x0], [y1, x1], [y2, x2] ]
@@ -47,7 +51,6 @@ def scan_conv( x0, y0, x1, y1, x2, y2, screen, color ):
     y2 = y_bot
 
     x3 = x_bot
-    #y3 = y_bot
 
 
     while y2 < y_top:

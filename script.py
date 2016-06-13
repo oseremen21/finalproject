@@ -77,6 +77,8 @@ def first_pass( commands ):
     frameCheck = varyCheck = nameCheck = 0
     name = ''
 
+    num_frames = 0
+
     for command in commands:
         
         if command[0] == 'frames':
